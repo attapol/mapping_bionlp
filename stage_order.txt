@@ -1,0 +1,21 @@
+create DocLayer
+create TokenLayer
+create VocabLayer
+create DocVocabLayer
+stage DocFreq
+stage TFIDF
+stage OutputTFIDF
+stage BasicLDA
+#Use save/loads like this so you don't have to run the entire pipeline each time
+#If you want to start from a given section that you have passed already, comment 
+#out everything before it and uncomment the load. It will load state and start from there.
+save
+#load
+stage DocTopicDistributions
+stage OutputCSV_Dual
+stage OutputCSV_TFIDF
+stage OutputCSV_Topics
+save
+#load
+create YearLayer
+stage OutputCSV_YearTopics

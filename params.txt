@@ -1,0 +1,41 @@
+#---------------------------
+# Basic Parameters
+#---------------------------
+
+doc_database = bionlp.sqlite
+
+stage_file = te_stage_order.txt
+#specifying output_filename and/or input_filename, allows input and/or output from xml, default is db
+#and requires input/output_database
+
+#input_filename = output.xml
+#output_filename = output.xml
+input_database = output.db
+output_database = output.db
+
+#---------------------------
+# LDA Parameters
+#---------------------------
+
+mallet_home = /Applications/packages/mallet-2.0.7
+mallet_bin = /Applications/packages/mallet-2.0.7/bin/mallet
+
+#Note: num_topics is also required for the DocTopicDistributions stage
+num_topics = 30
+optimize_interval = 10
+num_iterations = 1000
+
+#---------------------------
+# TF-IDF
+#---------------------------
+
+tfidf_output_top_k = 50
+
+#---------------------------
+# Clustering
+#---------------------------
+
+csv_to_cluster = dual.csv
+#tfidf.csv for TDIDF clustering, topics.csv for LDA, dual.csv for both
+cluster_out_file = dclusters.txt
+num_clusters = 10
